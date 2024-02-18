@@ -37,6 +37,7 @@ function M.setup()
       { name = "path" },
       { name = "luasnip" },
       { name = "buffer" },
+      { name = "vsnip" },
     },
   })
 
