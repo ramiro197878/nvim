@@ -38,6 +38,7 @@ function M.setup()
       { name = "luasnip" },
       { name = "buffer" },
       { name = "vsnip" },
+      { name = "yamlfmt" },
     },
   })
 
