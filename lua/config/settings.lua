@@ -5,6 +5,7 @@ vim.o.termguicolors = true
 vim.o.clipboard = "unnamedplus"
 vim.opt.breakindent = true
 vim.opt.linebreak = true
+vim.opt.colorcolumn = '81'
 vim.o.wrap = true
 vim.opt.list = true
 vim.opt.listchars = { tab = '| ', trail = '·' }
