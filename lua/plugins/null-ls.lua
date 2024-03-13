@@ -16,7 +16,7 @@ return {
         null_ls.builtins.diagnostics.ansiblelint.with({
           filetypes = { "yaml" },
         }),
-        null_ls.builtins.diagnostics.flake8,
+        null_ls.builtins.diagnostics.pylint,
       },
     })
 
