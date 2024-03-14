@@ -8,6 +8,12 @@ return {
       "lua",
       "luadoc",
       "yaml",
+      "python",
+      "json",
+      "gitignore",
+      "markdown",
+      "dockerfile",
+      "bash",
     },
     highlight = {
       enable = true,
