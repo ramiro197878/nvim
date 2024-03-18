@@ -68,17 +68,9 @@ return {
         },
       },
     })
-    require("lspconfig").pylsp.setup({
-      settings = {
-        pylsp = {
-          plugins = {
-            pycodestyle = {
-              ignore = { "W391" },
-              maxLineLength = 100,
-            },
-          },
-        },
-      },
+    require("lspconfig").pyright.setup({
+      on_attach = on_attach,
+      filetypes = {"python"},
     })
   end,
 }
