@@ -93,6 +93,13 @@ return {
       desc = "Telescope Help"
     },
     {
+      "<leader>lg",
+      function()
+        require("telescope.builtin").live_grep()
+      end,
+      desc = "Telescope Live Grep"
+    },
+    {
       "<leader>fb",
       function()
         require("telescope").extensions.file_browser.file_browser({ path = "%:h:p", select_buffer = true })

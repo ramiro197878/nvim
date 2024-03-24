@@ -3,6 +3,7 @@ return {
   build = ":TSUpdate",
   event = "VeryLazy",
   main  = "nvim-treesitter.configs",
+  auto_install = true,
   opts = {
     ensure_installed = {
       "lua",
@@ -14,6 +15,7 @@ return {
       "markdown",
       "dockerfile",
       "bash",
+      "regex",
     },
     highlight = {
       enable = true,

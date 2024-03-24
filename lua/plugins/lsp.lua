@@ -2,6 +2,8 @@ return {
   "neovim/nvim-lspconfig",
   dependencies = {
     "williamboman/mason.nvim",
+    "williamboman/mason-lspconfig.nvim",
+    "WhoIsSethDaniel/mason-tool-installer.nvim",
     "folke/neodev.nvim",
   },
   config = function()
@@ -31,6 +33,31 @@ return {
         vim.lsp.buf.format({ async = true })
       end, opts)
     end
+
+    require('mason').setup()
+    require('mason-lspconfig').setup({
+      -- Install these LSPs automatically
+      ensure_installed = {
+        'bashls',
+        'lua_ls',
+        'pyright',
+        "ansiblels",
+      }
+    })
+
+    require('mason-tool-installer').setup({
+      -- Install these linters, formatters, debuggers automatically
+      ensure_installed = {
+        'black',
+        'debugpy',
+        'flake8',
+        'isort',
+        'mypy',
+        'pylint',
+      },
+    })
+
+    vim.api.nvim_command('MasonToolsInstall')
 
     require("neodev").setup()
     require("lspconfig").lua_ls.setup({
@@ -70,7 +97,13 @@ return {
     })
     require("lspconfig").pyright.setup({
       on_attach = on_attach,
-      filetypes = {"python"},
+      autostar = true,
+      filetypes = { "python" },
+    })
+    require("lspconfig").bashls.setup({
+      on_attach = on_attach,
+      autostar = true,
+      filetypes = { "sh" },
     })
   end,
 }
