@@ -12,8 +12,6 @@ return {
       "python",
       "json",
       "gitignore",
-      "markdown",
-      "dockerfile",
       "bash",
       "regex",
     },
