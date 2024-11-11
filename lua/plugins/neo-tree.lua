@@ -6,6 +6,10 @@ return {
     "nvim-tree/nvim-web-devicons",
     "MunifTanjim/nui.nvim",
   },
+  keys = {
+    { "<C-n>", ":Neotree filesystem reveal left<CR>", desc = "NeoTree" },
+    { "<leader>bf", ":Neotree buffers reveal float<CR>", desc = "NeoTree" },
+  },
   config = function()
     require("neo-tree").setup({
       event_handlers = {
@@ -28,8 +32,5 @@ return {
         },
       },
     })
-
-    vim.keymap.set("n", "<C-n>", ":Neotree filesystem reveal left<CR>", {})
-    -- vim.keymap.set("n", "<leader>bf", ":Neotree buffers reveal float<CR>", {})
   end,
 }

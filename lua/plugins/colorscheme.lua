@@ -2,10 +2,17 @@ return {
   {
     "catppuccin/nvim",
     lazy = false,
-    name = "catppuccin",
     priority = 1000,
+    integrations = {
+      alpha = true,
+      neotree = true,
+      treesitter = true,
+      telescope = {
+        enabled = true,
+      },
+    },
     config = function()
-      vim.cmd.colorscheme "catppuccin"
-    end
-  }
+      vim.cmd([[colorscheme catppuccin]])
+    end,
+  },
 }
